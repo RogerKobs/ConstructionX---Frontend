@@ -219,6 +219,10 @@ export interface ConstructionSiteEmployeeWorkLog {
   workDate: string;
   startTime: string;
   endTime: string;
+  totalWorkMinutes?: number | null;
+  hours?: number | null;
+  minutes?: number | null;
+  seconds?: number | null;
 
   employeeName?: string | null;
   constructionSiteName?: string | null;
@@ -234,4 +238,44 @@ export interface GetConstructionSiteEmployeeWorkLogsAllQuery {
 }
 export interface UpsertConstructionSiteEmployeeWorkLogsBulkRequest {
   entries: UpsertConstructionSiteEmployeeWorkLogsRequest[];
+}
+
+export interface GetWorkLogPreparationQuery {
+  dateFrom: string;
+  dateTo: string;
+}
+
+export interface WorkLogPreparationAssignmentWindow {
+  dateFrom: string;
+  dateTo?: string | null;
+}
+
+export interface WorkLogPreparationExistingWorkLog {
+  id: number;
+  constructionSiteEmployeeId: number;
+  workDate: string;
+  startTime: string;
+  endTime: string;
+  totalWorkMinutes?: number | null;
+  hours?: number | null;
+  minutes?: number | null;
+  seconds?: number | null;
+}
+
+export interface WorkLogPreparationEmployee {
+  employeeId: number;
+  firstName: string;
+  lastName: string;
+  jobPositionName?: string | null;
+  eligibleDateFrom: string;
+  eligibleDateTo: string;
+  assignmentWindows: WorkLogPreparationAssignmentWindow[];
+  existingWorkLogs: WorkLogPreparationExistingWorkLog[];
+}
+
+export interface WorkLogPreparationSite {
+  constructionSiteId: number;
+  constructionSiteName: string;
+  location: string;
+  employees: WorkLogPreparationEmployee[];
 }

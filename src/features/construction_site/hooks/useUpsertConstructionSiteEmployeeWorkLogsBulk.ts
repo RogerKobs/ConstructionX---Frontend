@@ -22,8 +22,11 @@ export function useUpsertConstructionSiteEmployeeWorkLogsBulk() {
         });
       });
 
-    qc.invalidateQueries({
+      qc.invalidateQueries({
         queryKey: constructionSitesKeys.employeeWorkLogs(),
+      });
+      qc.invalidateQueries({
+        queryKey: [...constructionSitesKeys.employeeWorkLogs(), "preparation"],
       });
 
       enqueueSnackbar(data.messages?.[0] || data?.messages , {
