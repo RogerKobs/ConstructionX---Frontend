@@ -15,6 +15,8 @@ import type {
   ConstructionSiteEmployeeWorkLog,
   ConstructionSiteEmployeeWorkLogDay,
   UpsertConstructionSiteEmployeeWorkLogsBulkRequest,
+  GetWorkLogPreparationQuery,
+  WorkLogPreparationSite,
 } from "..";
 import { authFetch, authFetchBlob } from "../../../lib/authFetch";
 import type { ApiEnvelope } from "../../administration/tenants";
@@ -171,6 +173,19 @@ export const ConstructionSiteApi = {
     const res = await authFetch<
       ApiEnvelope<PagedResult<ConstructionSiteEmployeeWorkLog>>
     >(url);
+
+    return res.data;
+  },
+  getWorkLogPreparation: async (
+    query: GetWorkLogPreparationQuery
+  ): Promise<WorkLogPreparationSite[]> => {
+    const params = new URLSearchParams();
+    params.append("DateFrom", query.dateFrom);
+    params.append("DateTo", query.dateTo);
+
+    const res = await authFetch<ApiEnvelope<WorkLogPreparationSite[]>>(
+      `${base}/employee-work-logs/preparation?${params.toString()}`
+    );
 
     return res.data;
   },

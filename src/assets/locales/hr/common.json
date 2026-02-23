@@ -64,6 +64,21 @@
       "employedFrom": "Zaposlen od",
       "notEmployed": "Nije zaposlen",
       "createSubtitle": "Unesite detalje rada"
+    },
+    "stepper": {
+      "period": "Razdoblje",
+      "site": "Gradilište",
+      "employeeTime": "Zaposlenik i vrijeme",
+      "subtitle": "Pratite korake za evidenciju radnih sati",
+      "summary": "Sažetak",
+      "summarySubtitle": "Odabrane vrijednosti",
+      "dateFrom": "Datum od",
+      "dateTo": "Datum do",
+      "periodInvalid": "Datum do mora biti veći ili jednak datumu od.",
+      "noAssignments": "Nema dodjela zaposlenika za odabrano razdoblje.",
+      "invalidTimeRange": "Vrijeme završetka mora biti nakon vremena početka.",
+      "stepCounter": "Korak {{step}} od {{total}}",
+      "inlineHint": "Pregledajte svaki korak prije spremanja."
     }
   },
   "map": {
@@ -304,6 +319,7 @@
   "common": {
     "navigate": "Navigiraj",
     "back": "Natrag",
+    "next": "Dalje",
     "retry": "Pokušaj ponovno",
     "yes": "Da",
     "no": "Ne",

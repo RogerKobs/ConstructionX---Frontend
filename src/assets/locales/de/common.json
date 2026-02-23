@@ -60,6 +60,21 @@
       "birthDateUnknown": "Geburtsdatum unbekannt",
       "employedFrom": "Beschäftigt seit",
       "notEmployed": "Nicht angestellt"
+    },
+    "stepper": {
+      "period": "Zeitraum",
+      "site": "Baustelle",
+      "employeeTime": "Mitarbeiter und Zeit",
+      "subtitle": "Folgen Sie den Schritten zur Erfassung der Arbeitszeit",
+      "summary": "Übersicht",
+      "summarySubtitle": "Ausgewählte Werte",
+      "dateFrom": "Datum von",
+      "dateTo": "Datum bis",
+      "periodInvalid": "Datum bis muss größer oder gleich Datum von sein.",
+      "noAssignments": "Keine Mitarbeiterzuweisungen für den ausgewählten Zeitraum gefunden.",
+      "invalidTimeRange": "Die Endzeit muss nach der Startzeit liegen.",
+      "stepCounter": "Schritt {{step}} von {{total}}",
+      "inlineHint": "Prüfen Sie jeden Schritt vor dem Speichern."
     }
   },
   "map": {
@@ -304,6 +319,7 @@
   "common": {
     "navigate": "Navigieren",
     "back": "Zurück",
+    "next": "Weiter",
     "retry": "Erneut versuchen",
     "yes": "Ja",
     "no": "Nein",

@@ -24,4 +24,6 @@ export const constructionSitesKeys = {
       "all",
       filters ?? {},
     ] as const,
+  workLogPreparation: (filters: { dateFrom: string; dateTo: string }) =>
+    [...constructionSitesKeys.employeeWorkLogs(), "preparation", filters] as const,
 };

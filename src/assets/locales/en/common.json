@@ -63,6 +63,21 @@
       "employedFrom": "Employed from",
       "notEmployed": "Not employed",
       "createSubtitle": "Enter work details"
+    },
+    "stepper": {
+      "period": "Period",
+      "site": "Construction site",
+      "employeeTime": "Employee & time",
+      "subtitle": "Follow the steps to log work hours",
+      "summary": "Summary",
+      "summarySubtitle": "Selected values",
+      "dateFrom": "Date from",
+      "dateTo": "Date to",
+      "periodInvalid": "Date to must be greater than or equal to date from.",
+      "noAssignments": "No employee assignments found for the selected period.",
+      "invalidTimeRange": "End time must be after start time.",
+      "stepCounter": "Step {{step}} of {{total}}",
+      "inlineHint": "Review each step before saving."
     }
   },
   "map": {
@@ -303,6 +318,7 @@
   "common": {
     "navigate": "Navigate",
     "back": "Back",
+    "next": "Next",
     "retry": "Retry",
     "yes": "Yes",
     "no": "No",
